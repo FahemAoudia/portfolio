@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useLocale } from "@/contexts/LocaleProvider";
 
@@ -29,9 +30,22 @@ export function Projects() {
               whileHover={{ y: -6 }}
               className="group relative flex min-h-0 flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.03] shadow-glass sm:rounded-3xl"
             >
-              <div
-                className={`h-28 shrink-0 bg-gradient-to-br sm:h-36 ${p.accent} opacity-90 transition duration-500 group-hover:opacity-100`}
-              />
+              <div className="relative h-28 shrink-0 overflow-hidden sm:h-36">
+                {p.coverImage ? (
+                  <Image
+                    src={p.coverImage}
+                    alt={p.coverAlt ?? p.title}
+                    fill
+                    className="object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={i === 0}
+                  />
+                ) : (
+                  <div
+                    className={`h-full w-full bg-gradient-to-br ${p.accent} opacity-90 transition duration-500 group-hover:opacity-100`}
+                  />
+                )}
+              </div>
               <div className="relative flex min-h-0 flex-1 flex-col p-5 sm:p-7">
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
@@ -69,6 +83,8 @@ export function Projects() {
                 {p.live && (
                   <a
                     href={p.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-6 inline-flex text-sm font-medium text-cyan-300 hover:text-cyan-200"
                   >
                     {head.live} →

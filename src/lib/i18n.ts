@@ -55,6 +55,8 @@ export type Translation = {
       repo: string;
       live: string | null;
       stack: readonly string[];
+      coverImage?: string;
+      coverAlt?: string;
     }[];
   };
   skills: {
@@ -113,9 +115,10 @@ export type Translation = {
 const projectsBase = [
   {
     slug: "makasouk",
+    coverImage: "/makasouk-cover.png",
     accent: "from-cyan-500/20 to-violet-500/10",
     repo: "https://github.com/FahemAoudia/Platform-Makasouk",
-    live: null as string | null,
+    live: "https://web-production-e1b6c.up.railway.app",
     stack: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Node.js"] as const,
   },
   {
@@ -201,10 +204,12 @@ export const translations: Record<Locale, Translation> = {
       intro:
         "Des réalisations orientées impact — commerce patrimoine, stack IA médicale et services d’inférence distribués.",
       repo: "Dépôt",
-      live: "Démo",
+      live: "Demo",
       items: [
         {
           ...projectsBase[0],
+          coverAlt:
+            "Aperçu du site Makasouk — plateforme e‑commerce de mode algérienne (FR/AR)",
           title: "Makasouk",
           subtitle: "Plateforme e‑commerce patrimoine",
           description:
@@ -446,10 +451,12 @@ export const translations: Record<Locale, Translation> = {
       intro:
         "Impact-forward builds — heritage commerce, medical AI research stacks, and distributed inference services.",
       repo: "Repo",
-      live: "Live demo",
+      live: "Demo",
       items: [
         {
           ...projectsBase[0],
+          coverAlt:
+            "Makasouk website preview — Algerian heritage fashion e‑commerce (FR/AR)",
           title: "Makasouk",
           subtitle: "Heritage e‑commerce platform",
           description:
