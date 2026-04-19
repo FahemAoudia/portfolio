@@ -123,9 +123,10 @@ const projectsBase = [
   },
   {
     slug: "brainscan",
+    coverImage: "/brainscan-cover.png",
     accent: "from-violet-500/20 to-rose-500/10",
     repo: "https://github.com/FahemAoudia/BrainScan-AI-Medical-Diagnostic-Platform",
-    live: null as string | null,
+    live: "https://temur-frontend-production.up.railway.app",
     stack: ["Python", "TensorFlow", "Jupyter", "FastAPI", "React"] as const,
   },
   {
@@ -203,7 +204,7 @@ export const translations: Record<Locale, Translation> = {
       title: "Projets sur GitHub",
       intro:
         "Des réalisations orientées impact — commerce patrimoine, stack IA médicale et services d’inférence distribués.",
-      repo: "Dépôt",
+      repo: "GitHub",
       live: "Demo",
       items: [
         {
@@ -222,6 +223,8 @@ export const translations: Record<Locale, Translation> = {
         },
         {
           ...projectsBase[1],
+          coverAlt:
+            "Aperçu BrainScan AI — plateforme d’analyse IRM assistée par intelligence artificielle",
           title: "BrainScan AI",
           subtitle: "Plateforme de diagnostic médical",
           description:
@@ -450,7 +453,7 @@ export const translations: Record<Locale, Translation> = {
       title: "GitHub-backed projects",
       intro:
         "Impact-forward builds — heritage commerce, medical AI research stacks, and distributed inference services.",
-      repo: "Repo",
+      repo: "GitHub",
       live: "Demo",
       items: [
         {
@@ -469,6 +472,8 @@ export const translations: Record<Locale, Translation> = {
         },
         {
           ...projectsBase[1],
+          coverAlt:
+            "BrainScan AI website preview — AI-assisted MRI analysis for brain tumor detection",
           title: "BrainScan AI",
           subtitle: "Medical diagnostic platform",
           description:
