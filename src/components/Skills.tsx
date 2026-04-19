@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useLocale } from "@/contexts/LocaleProvider";
+import { translations } from "@/lib/i18n";
+
+/** Skills labels & tech names stay in English for both locales (FR/EN). */
+const skillGroupsEn = translations.en.skillGroups;
 
 export function Skills() {
   const { t } = useLocale();
@@ -18,8 +22,8 @@ export function Skills() {
           <p className="mt-4 text-base text-zinc-400 sm:text-lg">{t.skills.intro}</p>
         </div>
 
-        <div className="mt-10 grid gap-8 sm:mt-14 md:grid-cols-2">
-          {t.skillGroups.map((g, gi) => (
+        <div className="mt-10 grid gap-8 sm:mt-14 md:grid-cols-2 xl:grid-cols-3">
+          {skillGroupsEn.map((g, gi) => (
             <motion.div
               key={g.name}
               initial={{ opacity: 0, y: 16 }}
@@ -32,9 +36,8 @@ export function Skills() {
               <div className="mt-6 space-y-5">
                 {g.items.map((item) => (
                   <div key={item.name}>
-                    <div className="flex justify-between gap-2 text-sm">
-                      <span className="min-w-0 text-zinc-200">{item.name}</span>
-                      <span className="shrink-0 text-zinc-500">{item.level}%</span>
+                    <div className="text-sm">
+                      <span className="text-zinc-200">{item.name}</span>
                     </div>
                     <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/[0.06]">
                       <motion.div

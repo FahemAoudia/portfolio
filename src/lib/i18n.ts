@@ -119,7 +119,15 @@ const projectsBase = [
     accent: "from-cyan-500/20 to-violet-500/10",
     repo: "https://github.com/FahemAoudia/Platform-Makasouk",
     live: "https://web-production-e1b6c.up.railway.app",
-    stack: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Node.js"] as const,
+    stack: [
+      "TypeScript",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "Socket.io",
+      "Prisma",
+      "Tailwind CSS",
+    ] as const,
   },
   {
     slug: "brainscan",
@@ -127,7 +135,7 @@ const projectsBase = [
     accent: "from-violet-500/20 to-rose-500/10",
     repo: "https://github.com/FahemAoudia/BrainScan-AI-Medical-Diagnostic-Platform",
     live: "https://temur-frontend-production.up.railway.app",
-    stack: ["Python", "TensorFlow", "Jupyter", "FastAPI", "React"] as const,
+    stack: ["Python", "TensorFlow", "FastAPI", "React", "Docker", "MySQL", "MongoDB"] as const,
   },
   {
     slug: "microservice",
@@ -210,15 +218,18 @@ export const translations: Record<Locale, Translation> = {
         {
           ...projectsBase[0],
           coverAlt:
-            "Aperçu du site Makasouk — plateforme e‑commerce de mode algérienne (FR/AR)",
+            "Aperçu Makasouk — plateforme e‑commerce sur-mesure (FR/AR)",
           title: "Makasouk",
-          subtitle: "Plateforme e‑commerce patrimoine",
+          subtitle: "Plateforme de couture sur-mesure",
           description:
-            "Une vitrine e‑commerce inspirée du vintage pour la haute couture algérienne : atelier numérique muséal avec parcours d’achat fluide — Karakou, Kabyle et Constantine présentés avec un soin de présentation premium.",
+            "E‑commerce et système de couture en temps réel : plateforme full-stack pour la mode sur-mesure — mesures guidées, suivi des commandes en direct et parcours par rôles pour clients, tailleurs et administrateurs.",
           highlights: [
-            "Storytelling produit + parcours commerce adapté à la mode premium",
-            "Code TypeScript avec UI moderne",
-            "Clarté, confiance et identité de marque marquée",
+            "Prise de mesures guidée avec support multilingue dynamique (FR/AR)",
+            "Cycle de commande en temps réel via WebSockets (Socket.io)",
+            "Architecture par rôles (client, tailleur, admin) avec tableaux de bord dédiés",
+            "UI moderne : Next.js, Tailwind, mode sombre et identité de marque premium",
+            "API REST (Express), authentification JWT et ORM Prisma",
+            "Monorepo : backend scalable et frontend modulaire",
           ],
         },
         {
@@ -228,11 +239,13 @@ export const translations: Record<Locale, Translation> = {
           title: "BrainScan AI",
           subtitle: "Plateforme de diagnostic médical",
           description:
-            "Exploration bout en bout de l’analyse IRM assistée par IA — alignée sur un stage avec classification CNN (4 classes) et précision modèle exceptionnelle.",
+            "Plateforme médicale pilotée par l’IA pour l’analyse d’IRM cérébrales via des modèles CNN, avec une architecture full-stack pensée pour des usages cliniques concrets.",
           highlights: [
-            "Pipeline CNN pour les flux d’imagerie IRM",
-            "Notebooks de recherche + structure orientée application",
-            "Pont entre expérimentation ML et objectifs UX diagnostics",
+            "Classification IRM par CNN (4 classes) exposée via FastAPI (API REST)",
+            "Application full-stack React (SCSS, Framer Motion) avec contrôle d’accès par rôles (admin, médecin, patient)",
+            "Architecture hybride : MySQL (utilisateurs, rendez-vous) + MongoDB (scans, rapports, chat)",
+            "Services dockerisés avec séparation nette frontend / backend",
+            "Génération automatique de rapports médicaux (PDF) et suivi des diagnostics",
           ],
         },
         {
@@ -253,39 +266,55 @@ export const translations: Record<Locale, Translation> = {
       label: "Capacités",
       title: "Compétences alignées sur la livraison",
       intro:
-        "Regroupées comme les équipes recrutement y pensent : interface, services, ML et plateforme.",
+        "Cartographie proche des fiches de poste full-stack / IA : du front typé aux APIs, aux données, au déploiement.",
     },
     skillGroups: [
       {
         name: "Front-end",
         items: [
           { name: "React / Next.js", level: 95 },
-          { name: "TypeScript / JavaScript", level: 92 },
-          { name: "HTML / CSS / Tailwind", level: 90 },
+          { name: "TypeScript", level: 93 },
+          { name: "Tailwind CSS", level: 92 },
         ],
       },
       {
-        name: "Back-end & API",
+        name: "Back-end & APIs",
         items: [
-          { name: "Node.js", level: 88 },
-          { name: "FastAPI / Python", level: 90 },
-          { name: "REST / GraphQL", level: 85 },
+          { name: "Node.js / Express", level: 90 },
+          { name: "FastAPI (Python)", level: 90 },
+          { name: "REST APIs", level: 88 },
         ],
       },
       {
-        name: "IA / ML",
+        name: "Data & persistence",
         items: [
-          { name: "TensorFlow / CNN", level: 88 },
-          { name: "Scikit-learn / pipelines", level: 85 },
+          { name: "SQL (MySQL / PostgreSQL)", level: 90 },
+          { name: "MongoDB", level: 86 },
+          { name: "ORM (Prisma)", level: 88 },
+        ],
+      },
+      {
+        name: "AI / Machine Learning",
+        items: [
+          { name: "TensorFlow (CNNs)", level: 90 },
+          { name: "Scikit-learn", level: 84 },
           { name: "OpenCV", level: 78 },
         ],
       },
       {
         name: "DevOps & cloud",
         items: [
-          { name: "Docker / CI/CD", level: 85 },
+          { name: "Docker", level: 88 },
+          { name: "GitHub Actions (CI/CD)", level: 86 },
           { name: "AWS / Azure", level: 80 },
-          { name: "Linux", level: 82 },
+        ],
+      },
+      {
+        name: "Systems & security",
+        items: [
+          { name: "Real-time Systems (WebSockets / Socket.io)", level: 88 },
+          { name: "API Security (JWT, RBAC)", level: 87 },
+          { name: "System Design", level: 82 },
         ],
       },
     ],
@@ -376,7 +405,7 @@ export const translations: Record<Locale, Translation> = {
         hello:
           "Bonjour — je suis l’assistant du portfolio de Fahem. Demandez la stack, les projets ou comment le contacter.",
         projects:
-          "Projets mis en avant : Makasouk (commerce patrimoine), BrainScan AI (IRM / CNN), plateforme microservices FastAPI + React pour la santé des plantes.",
+          "Projets mis en avant : Makasouk (e‑commerce sur-mesure, temps réel), BrainScan AI (IRM / CNN), microservices FastAPI + React pour la santé des plantes.",
         stack:
           "Stack principale : React, Next.js, Node.js, Python, FastAPI, TensorFlow, Docker, AWS/Azure — avec des API propres et un impact mesurable.",
         contact:
@@ -459,15 +488,18 @@ export const translations: Record<Locale, Translation> = {
         {
           ...projectsBase[0],
           coverAlt:
-            "Makasouk website preview — Algerian heritage fashion e‑commerce (FR/AR)",
+            "Makasouk — custom tailoring e‑commerce platform preview (FR/AR)",
           title: "Makasouk",
-          subtitle: "Heritage e‑commerce platform",
+          subtitle: "Custom Tailoring Platform",
           description:
-            "A vintage-inspired Algerian couture platform: museum-style digital atelier with seamless commerce — Karakou, Kabyle, and Constantine dresses presented with craft-level polish.",
+            "E-commerce & real-time tailoring system. Full-stack platform for custom-made fashion, combining guided measurements, real-time order tracking, and role-based workflows for clients, tailors, and admins.",
           highlights: [
-            "Product storytelling + commerce flow tuned for premium fashion",
-            "TypeScript-first codebase with modern UI patterns",
-            "Designed for clarity, trust, and a distinctive brand feel",
+            "Guided measurement system with dynamic multilingual support (FR/AR)",
+            "Real-time order lifecycle using WebSockets (Socket.io)",
+            "Role-based architecture (client, tailor, admin) with dedicated dashboards",
+            "Modern UI with Next.js, Tailwind, dark mode, and premium brand identity",
+            "REST API (Express) with JWT authentication and Prisma ORM",
+            "Monorepo architecture with scalable backend and modular frontend",
           ],
         },
         {
@@ -477,11 +509,13 @@ export const translations: Record<Locale, Translation> = {
           title: "BrainScan AI",
           subtitle: "Medical diagnostic platform",
           description:
-            "End-to-end exploration of AI-assisted MRI analysis — aligned with internship work on CNN classification (4 classes) with exceptional model accuracy.",
+            "AI-powered medical platform for brain MRI analysis using CNN models, combined with a full-stack architecture for real-world clinical workflows.",
           highlights: [
-            "CNN pipeline for MRI imaging workflows",
-            "Research-grade notebooks + application-oriented structure",
-            "Bridges ML experimentation with real-world diagnostic UX goals",
+            "CNN-based MRI classification (4 classes) exposed via FastAPI (REST API)",
+            "Full-stack app with React (SCSS, Framer Motion) and role-based access (admin, doctor, patient)",
+            "Hybrid data architecture: MySQL (users, appointments) + MongoDB (scans, reports, chat)",
+            "Dockerized services with clean frontend/backend separation",
+            "Automated medical report generation (PDF) and diagnostic tracking",
           ],
         },
         {
@@ -501,39 +535,56 @@ export const translations: Record<Locale, Translation> = {
     skills: {
       label: "Capabilities",
       title: "Skills mapped to shipping software",
-      intro: "Grouped the way hiring teams think: interface, services, ML, and platform.",
+      intro:
+        "Aligned with full-stack & AI job specs: typed frontends, APIs, data layers, and how systems go to production.",
     },
     skillGroups: [
       {
-        name: "Frontend",
+        name: "Front-end",
         items: [
           { name: "React / Next.js", level: 95 },
-          { name: "TypeScript / JavaScript", level: 92 },
-          { name: "HTML / CSS / Tailwind", level: 90 },
+          { name: "TypeScript", level: 93 },
+          { name: "Tailwind CSS", level: 92 },
         ],
       },
       {
-        name: "Backend & APIs",
+        name: "Back-end & APIs",
         items: [
-          { name: "Node.js", level: 88 },
-          { name: "FastAPI / Python", level: 90 },
-          { name: "REST / GraphQL", level: 85 },
+          { name: "Node.js / Express", level: 90 },
+          { name: "FastAPI (Python)", level: 90 },
+          { name: "REST APIs", level: 88 },
         ],
       },
       {
-        name: "AI / ML",
+        name: "Data & persistence",
         items: [
-          { name: "TensorFlow / CNNs", level: 88 },
-          { name: "Scikit-learn / Pipelines", level: 85 },
+          { name: "SQL (MySQL / PostgreSQL)", level: 90 },
+          { name: "MongoDB", level: 86 },
+          { name: "ORM (Prisma)", level: 88 },
+        ],
+      },
+      {
+        name: "AI / Machine Learning",
+        items: [
+          { name: "TensorFlow (CNNs)", level: 90 },
+          { name: "Scikit-learn", level: 84 },
           { name: "OpenCV", level: 78 },
         ],
       },
       {
-        name: "DevOps & Cloud",
+        name: "DevOps & cloud",
         items: [
-          { name: "Docker / CI/CD", level: 85 },
+          { name: "Docker", level: 88 },
+          { name: "GitHub Actions (CI/CD)", level: 86 },
           { name: "AWS / Azure", level: 80 },
-          { name: "Linux", level: 82 },
+        ],
+      },
+      {
+        name: "Systems & security",
+        items: [
+          { name: "Real-time Systems (WebSockets / Socket.io)", level: 88 },
+          { name: "API Security (JWT, RBAC)", level: 87 },
+          { name: "System Design", level: 82 },
         ],
       },
     ],
@@ -621,7 +672,7 @@ export const translations: Record<Locale, Translation> = {
         hello:
           "Hi — I’m Fahem’s portfolio assistant. Ask about stack, projects, or how to reach him.",
         projects:
-          "Featured work includes Makasouk (heritage commerce), BrainScan AI (MRI/CNN research stack), and a FastAPI + React microservice platform for plant health.",
+          "Featured work includes Makasouk (custom tailoring, real-time orders), BrainScan AI (MRI/CNN stack), and a FastAPI + React microservice platform for plant health.",
         stack:
           "Core stack: React, Next.js, Node.js, Python, FastAPI, TensorFlow, Docker, AWS/Azure — with a focus on clean APIs and measurable impact.",
         contact:
