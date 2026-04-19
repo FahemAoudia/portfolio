@@ -123,7 +123,6 @@ const projectsBase = [
       "TypeScript",
       "Next.js",
       "Node.js",
-      "Express",
       "Socket.io",
       "Prisma",
       "Tailwind CSS",
@@ -222,14 +221,13 @@ export const translations: Record<Locale, Translation> = {
           title: "Makasouk",
           subtitle: "Plateforme de couture sur-mesure",
           description:
-            "E‑commerce et système de couture en temps réel : plateforme full-stack pour la mode sur-mesure — mesures guidées, suivi des commandes en direct et parcours par rôles pour clients, tailleurs et administrateurs.",
+            "Plateforme e-commerce sur-mesure en temps réel, intégrant mesures guidées, suivi des commandes et une architecture full-stack conçue pour la gestion multi-rôles.",
           highlights: [
-            "Prise de mesures guidée avec support multilingue dynamique (FR/AR)",
-            "Cycle de commande en temps réel via WebSockets (Socket.io)",
-            "Architecture par rôles (client, tailleur, admin) avec tableaux de bord dédiés",
-            "UI moderne : Next.js, Tailwind, mode sombre et identité de marque premium",
-            "API REST (Express), authentification JWT et ORM Prisma",
-            "Monorepo : backend scalable et frontend modulaire",
+            "Guided measurement system with dynamic multilingual support (FR/AR)",
+            "Real-time order lifecycle using WebSockets (Socket.io)",
+            "Role-based architecture (client, tailor, admin) with dedicated dashboards",
+            "Modern UI with Next.js, Tailwind, dark mode, and premium brand identity",
+            "REST API with JWT authentication and Prisma ORM",
           ],
         },
         {
@@ -498,8 +496,7 @@ export const translations: Record<Locale, Translation> = {
             "Real-time order lifecycle using WebSockets (Socket.io)",
             "Role-based architecture (client, tailor, admin) with dedicated dashboards",
             "Modern UI with Next.js, Tailwind, dark mode, and premium brand identity",
-            "REST API (Express) with JWT authentication and Prisma ORM",
-            "Monorepo architecture with scalable backend and modular frontend",
+            "REST API with JWT authentication and Prisma ORM",
           ],
         },
         {
