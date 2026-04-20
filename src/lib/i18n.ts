@@ -246,11 +246,11 @@ export const translations: Record<Locale, Translation> = {
           description:
             "Plateforme médicale pilotée par l’IA pour l’analyse d’IRM cérébrales via des modèles CNN, avec une architecture full-stack adaptée à des usages cliniques réels.",
           highlights: [
-            "Classification IRM par CNN (4 classes) exposée via FastAPI (API REST)",
+            "Précision du modèle : 99,97 % (classification IRM, 4 classes)",
+            "Classification IRM par CNN exposée via FastAPI (API REST)",
             "Application full-stack React (SCSS, Framer Motion) avec contrôle d’accès par rôles (admin, médecin, patient)",
             "Architecture hybride : MySQL (utilisateurs, rendez-vous) + MongoDB (scans, rapports, chat)",
-            "Services dockerisés avec séparation nette frontend / backend",
-            "Génération automatique de rapports médicaux (PDF) et suivi des diagnostics",
+            "Stack dockerisée, séparation front/back, rapports PDF automatiques et suivi des diagnostics",
           ],
         },
         {
@@ -518,11 +518,11 @@ export const translations: Record<Locale, Translation> = {
           description:
             "AI-powered medical platform for brain MRI analysis using CNN models, combined with a full-stack architecture for real-world clinical workflows.",
           highlights: [
-            "CNN-based MRI classification (4 classes) exposed via FastAPI (REST API)",
+            "Model accuracy: 99.97% (MRI classification, 4 classes)",
+            "CNN-based MRI classification exposed via FastAPI (REST API)",
             "Full-stack app with React (SCSS, Framer Motion) and role-based access (admin, doctor, patient)",
             "Hybrid data architecture: MySQL (users, appointments) + MongoDB (scans, reports, chat)",
-            "Dockerized services with clean frontend/backend separation",
-            "Automated medical report generation (PDF) and diagnostic tracking",
+            "Dockerized stack, frontend/backend separation, automated PDF reports and diagnostic tracking",
           ],
         },
         {
