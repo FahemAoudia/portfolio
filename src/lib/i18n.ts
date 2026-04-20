@@ -27,10 +27,13 @@ export type Translation = {
     viewProjects: string;
     contact: string;
     statMri: string;
+    statMriValue: string;
     statStack: string;
     statStackValue: string;
     statLang: string;
     statLangValue: string;
+    statHighlight: string;
+    statHighlightValue: string;
   };
   about: {
     label: string;
@@ -176,11 +179,15 @@ export const translations: Record<Locale, Translation> = {
       badge: "Montréal · Ouvert aux opportunités",
       viewProjects: "Voir les projets",
       contact: "Contact",
-      statMri: "IRM CNN (stage)",
+      statMri: "Focus",
+      statMriValue:
+        "Systèmes temps réel · IA · Architectures cloud",
       statStack: "Stack",
-      statStackValue: "React · IA · Cloud",
+      statStackValue: "React · Node.js · TypeScript",
       statLang: "Langues",
       statLangValue: "FR · EN · AR",
+      statHighlight: "Highlight",
+      statHighlightValue: "CNN IRM — 99,97 % de précision",
     },
     about: {
       label: "À propos",
@@ -227,7 +234,7 @@ export const translations: Record<Locale, Translation> = {
             "Real-time order lifecycle using WebSockets (Socket.io)",
             "Role-based architecture (client, tailor, admin) with dedicated dashboards",
             "Modern UI with Next.js, Tailwind, dark mode, and premium brand identity",
-            "REST API with JWT authentication and Prisma ORM",
+            "Secure REST API (JWT) with Prisma ORM",
           ],
         },
         {
@@ -445,11 +452,14 @@ export const translations: Record<Locale, Translation> = {
       badge: "Montreal · Open to opportunities",
       viewProjects: "View projects",
       contact: "Contact",
-      statMri: "MRI CNN (internship)",
+      statMri: "Focus",
+      statMriValue: "Real-time systems · AI · Cloud-ready architectures",
       statStack: "Stack",
-      statStackValue: "React · AI · Cloud",
+      statStackValue: "React · Node.js · TypeScript",
       statLang: "Languages",
       statLangValue: "FR · EN · AR",
+      statHighlight: "Highlight",
+      statHighlightValue: "MRI CNN — 99.97% accuracy",
     },
     about: {
       label: "About",
@@ -496,7 +506,7 @@ export const translations: Record<Locale, Translation> = {
             "Real-time order lifecycle using WebSockets (Socket.io)",
             "Role-based architecture (client, tailor, admin) with dedicated dashboards",
             "Modern UI with Next.js, Tailwind, dark mode, and premium brand identity",
-            "REST API with JWT authentication and Prisma ORM",
+            "Secure REST API (JWT) with Prisma ORM",
           ],
         },
         {

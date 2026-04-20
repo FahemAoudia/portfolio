@@ -27,7 +27,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl"
+          className="w-full max-w-3xl lg:max-w-5xl"
         >
           <p className="mb-4 inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.15em] text-zinc-300 sm:text-xs sm:tracking-[0.2em]">
             <span className="h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.9)]" />
@@ -57,18 +57,30 @@ export function Hero() {
               {t.hero.contact}
             </a>
           </div>
-          <dl className="mt-14 grid max-w-lg grid-cols-1 gap-6 border-t border-white/10 pt-8 text-sm min-[480px]:grid-cols-3 min-[480px]:gap-4 sm:gap-6">
-            <div>
+          <dl className="mt-14 grid w-full grid-cols-1 gap-x-5 gap-y-8 border-t border-white/10 pt-8 text-sm sm:grid-cols-2 sm:gap-x-6 xl:grid-cols-4 xl:gap-y-6">
+            <div className="min-w-0 sm:col-span-2 xl:col-span-1">
               <dt className="text-zinc-500">{t.hero.statMri}</dt>
-              <dd className="mt-1 font-semibold text-white">99.97%</dd>
+              <dd className="mt-1 font-semibold leading-snug text-white">
+                {t.hero.statMriValue}
+              </dd>
             </div>
-            <div>
+            <div className="min-w-0">
               <dt className="text-zinc-500">{t.hero.statStack}</dt>
-              <dd className="mt-1 font-semibold text-white">{t.hero.statStackValue}</dd>
+              <dd className="mt-1 font-semibold leading-snug text-white">
+                {t.hero.statStackValue}
+              </dd>
             </div>
-            <div>
+            <div className="min-w-0">
               <dt className="text-zinc-500">{t.hero.statLang}</dt>
-              <dd className="mt-1 font-semibold text-white">{t.hero.statLangValue}</dd>
+              <dd className="mt-1 font-semibold leading-snug text-white">
+                {t.hero.statLangValue}
+              </dd>
+            </div>
+            <div className="min-w-0 sm:col-span-2 xl:col-span-1">
+              <dt className="text-zinc-500">{t.hero.statHighlight}</dt>
+              <dd className="mt-1 font-semibold leading-snug text-white">
+                {t.hero.statHighlightValue}
+              </dd>
             </div>
           </dl>
         </motion.div>
