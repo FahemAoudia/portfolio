@@ -2,6 +2,8 @@
 
 Site personnel (Next.js 15) : présentation, projets, compétences, parcours et contact. Interface **français / anglais**, déploiement adapté Vercel.
 
+Portfolio: https://fahemaoudia.vercel.app
+
 ## Stack
 
 - **Next.js 15** (App Router) · **React 19** · **TypeScript**
