@@ -1,7 +1,7 @@
 import { site } from "@/lib/site";
 import { translations } from "@/lib/i18n";
 
-const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fahem-aoudia.vercel.app";
+const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fahemaoudia.vercel.app";
 
 export function JsonLd() {
   const jobTitle = translations.fr.hero.jobTitle;

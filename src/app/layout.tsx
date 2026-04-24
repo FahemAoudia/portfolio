@@ -13,7 +13,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fahem-aoudia.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fahemaoudia.vercel.app";
 const fr = translations.fr;
 
 export const metadata: Metadata = {
